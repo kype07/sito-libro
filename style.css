@@ -1,17 +1,36 @@
 body {
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
     margin: 0;
     padding: 0;
+    height: 100vh; /* altezza piena schermo */
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* IMPORTANTISSIMO */
+    background: black;
+    font-family: Arial, sans-serif;
     text-align: center;
 }
 
+/* Layer stelle */
+#stars {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+}
+
+/* Contenuto sopra */
 .container {
+    width: 100%;
     max-width: 900px;
-    margin: 30px auto;
-    background: white;
+    height: 100%; /* prende tutta l'altezza del body */
+    border: 5px solid yellow;
+    background: rgba(255, 255, 255, 0.95);
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
@@ -19,10 +38,11 @@ h1 {
 }
 
 iframe {
+    flex: 1; /* prende tutto lo spazio disponibile */
     width: 100%;
-    height: 500px;
-    border: none;
+    border-radius: 8px;
     margin-bottom: 20px;
+    border: 5px solid rgb(0, 0, 0);
 }
 
 button {
@@ -37,4 +57,14 @@ button {
 
 button:hover {
     background: #0056b3;
+}
+
+/* Stelle */
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
 }
