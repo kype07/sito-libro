@@ -24,7 +24,7 @@ body {
     width: 100%;
     max-width: 900px;
     height: 100%; /* prende tutta l'altezza del body */
-    border: 5px solid yellow;
+    border: 5px solid rgba(212, 212, 0);
     background: rgba(255, 255, 255, 0.95);
     padding: 20px;
     box-shadow: 0 0 15px rgba(0,0,0,0.5);
